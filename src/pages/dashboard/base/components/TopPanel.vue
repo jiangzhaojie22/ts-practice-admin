@@ -45,6 +45,7 @@
         </template>
       </t-card>
     </t-col>
+    <test-conponent></test-conponent>
   </t-row>
 </template>
 

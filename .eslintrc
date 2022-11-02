@@ -1,3 +1,4 @@
+// http://eslint.cn/docs/user-guide/configuring 查询相关配置
 {
   "extends": [
     "plugin:@typescript-eslint/recommended",
@@ -13,10 +14,15 @@
     "jest": true,
     "es6": true
   },
+  /*
+  当访问当前源文件内未定义的变量时，no-undef 规则将发出警告。如果你想在一个源文件里使用全局变量，
+  推荐你在 ESLint 中定义这些全局变量，这样 ESLint 就不会发出警告了。你可以使用注释或在配置文件中定义全局变量。
+  */
   "globals": {
     "defineProps": "readonly",
     "defineEmits": "readonly"
   },
+  // 在配置文件里配置插件时，可以使用 plugins 关键字来存放插件名字的列表。插件名称可以省略 eslint-plugin- 前缀。
   "plugins": ["vue", "@typescript-eslint"],
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
@@ -37,7 +43,6 @@
     "no-param-reassign": "off",
     "no-shadow": "off",
     "guard-for-in": "off",
-
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
@@ -67,6 +72,7 @@
     "@typescript-eslint/ban-types": "off",
     "class-methods-use-this": "off" // 因为AxiosCancel必须实例化而能静态化所以加的规则，如果有办法解决可以取消
   },
+  "prettier/prettier": ["error", { "endOfLine": "auto" }],
   "overrides": [
     {
       "files": ["*.vue"],

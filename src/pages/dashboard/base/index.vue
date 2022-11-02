@@ -8,6 +8,7 @@
     <rank-list class="row-container" />
     <!-- 出入库概览 -->
     <output-overview class="row-container" />
+    <test-component class="row-container" />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import TopPanel from './components/TopPanel.vue';
 import MiddleChart from './components/MiddleChart.vue';
 import RankList from './components/RankList.vue';
 import OutputOverview from './components/OutputOverview.vue';
+import testComponent from './components/testComponent.vue';
 </script>
 
 <style scoped>
